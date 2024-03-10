@@ -1,0 +1,269 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Noto Sans, Ubuntu, Droid Sans,Helvetica Neue, sans-serif;  
+  font-size: 16px;
+  line-height: 20px;
+  color: #000000;
+  background-color: #ffffff;
+  text-align: center;
+  padding: 25px;
+}
+
+.container {
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 0px;
+  padding: 15px;
+  margin-bottom: 10px;  
+}
+
+h1 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.input {
+  display: inline-block;
+  padding: 10px;  
+  line-height: 1.5;  
+  border: 1px solid black;  
+  outline: none;
+}
+
+
+.input::placeholder {
+  color: rgb(200, 200, 200);
+}
+
+.btn {
+  display: inline-block;
+  min-width: 6rem;
+  text-align: center;
+  vertical-align: middle;
+  padding: 0.15rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: black;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 0px;
+  user-select: none;
+}
+
+.add {
+  border: 1px solid black;
+  background-color: white;
+  padding: 10px;
+  border-radius: 15px;  
+  font: inherit;
+  font-weight: normal;
+  
+  display: flex;
+  margin-left: auto;
+}
+/* for form */
+
+.ticket-form-container {    
+  display: none;
+  position: absolute;
+  z-index: 999;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 40%;
+}
+
+form {  
+  position: relative;
+}
+
+.form-control {
+  position: relative;
+  margin-bottom: 0.5rem;
+}
+
+.error {
+  background-color: white;
+  border: 2px solid red;
+}
+
+/* for table */
+.table {
+  border-spacing: 0;
+  border-collapse: collapse;
+  table-layout: fixed;  
+}
+
+thead th {
+  padding: 5px;
+}
+
+.tickets {
+  font: inherit;
+  height: 4rem;  
+}
+
+tbody {
+  display: block;
+  min-height: 40vh;
+  width: 100%;
+  background-color:white;  
+  color: black;
+}
+
+.ticket-row {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 20px;
+  min-width: 500px;
+  background-color: #fff;
+  border-bottom: 1px solid black;
+}
+
+.ticket-body {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  font: inherit;
+}
+
+.ticket-description {
+  display: none;
+  padding-top: 30px;
+  text-align: left;
+}
+
+.update,
+.delete {
+  display: flex;
+  align-self: flex-start;
+  font-size: 1.25rem;  
+  min-width: 30px;
+  height: 30px;  
+  text-align: center;
+  border: 1px solid black;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+}
+
+.update:hover,
+.delete:hover,
+.done:hover {
+  cursor: pointer;
+}
+
+.ticket-name {
+  position: relative;
+  display: block;
+  text-align: left;
+}
+
+.done {
+  display: flex;
+  align-self: flex-start;  
+  font-size: 1.25rem;  
+  min-width: 30px;
+  height: 30px;  
+  text-align: center;
+  border: 1px solid black;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+}
+
+.ticket-btn {
+  margin-top: 20px;
+}
+
+.delete-message {
+  display: none;
+  position: absolute;
+  left: 50%;
+  z-index: 999;
+  border: 1px solid black;
+  padding: 20px;
+  background-color: white;
+  transform: translate(-50%, -50%);
+  top: 25%;  
+}
+
+.ticket-form-container_visible,
+.delete-message_visible,
+.ticket-description_visible {  
+  display: block;
+}
+
+#ticket-form {  
+  min-width: 380px;
+  border: 1px solid black;
+  padding: 10px;
+  background-color: white;   
+}
+
+.form-ticket {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+textarea {
+  resize: none;
+  overflow: auto;
+  font: inherit;
+}
+
+.ticket-form-error {
+  z-index: 10000;
+}
+
+.label-ticket {
+  text-align: left;
+  font-size: 1.15rem;
+  margin: 0.5rem 0;
+}
+
+.input-ticket {
+  border-radius: 0px;
+  font: inherit;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.btn-add {
+  background-color: white;
+  color: black;
+  border-radius: 15px;
+}
+
+.btn-close {
+  border-radius: 15px;
+}
+
+@media (min-width: 769px) {
+  .container {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  .table {
+    margin: auto;
+  }
+}
+
+.modal-header {
+  font-weight: 400;
+  text-align: center;
+  margin: 20px;
+  font-weight: normal;
+}
